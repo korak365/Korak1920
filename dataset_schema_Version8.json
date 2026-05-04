@@ -1,0 +1,162 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["productName", "productUrl", "totalReviewsAnalyzed", "averageRating", "overallSentiment", "prosCount", "consCount"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "productName": {
+                        "label": "Product Name",
+                        "format": "text"
+                    },
+                    "productUrl": {
+                        "label": "Product URL",
+                        "format": "link"
+                    },
+                    "totalReviewsAnalyzed": {
+                        "label": "Total Reviews Analyzed",
+                        "format": "number"
+                    },
+                    "averageRating": {
+                        "label": "Average Rating",
+                        "format": "number"
+                    },
+                    "overallSentiment": {
+                        "label": "Overall Sentiment",
+                        "format": "text"
+                    },
+                    "prosCount": {
+                        "label": "Pros Found",
+                        "format": "number"
+                    },
+                    "consCount": {
+                        "label": "Cons Found",
+                        "format": "number"
+                    }
+                }
+            }
+        },
+        "sentimentSummary": {
+            "title": "Sentiment Summary",
+            "transformation": {
+                "fields": ["productName", "positiveReviewCount", "negativeReviewCount", "neutralReviewCount", "positivePercentage", "negativePercentage", "sentimentScore"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "productName": {
+                        "label": "Product Name",
+                        "format": "text"
+                    },
+                    "positiveReviewCount": {
+                        "label": "Positive Reviews",
+                        "format": "number"
+                    },
+                    "negativeReviewCount": {
+                        "label": "Negative Reviews",
+                        "format": "number"
+                    },
+                    "neutralReviewCount": {
+                        "label": "Neutral Reviews",
+                        "format": "number"
+                    },
+                    "positivePercentage": {
+                        "label": "Positive %",
+                        "format": "number"
+                    },
+                    "negativePercentage": {
+                        "label": "Negative %",
+                        "format": "number"
+                    },
+                    "sentimentScore": {
+                        "label": "Sentiment Score (-1 to 1)",
+                        "format": "number"
+                    }
+                }
+            }
+        },
+        "prosAndCons": {
+            "title": "Pros and Cons",
+            "transformation": {
+                "fields": ["productName", "prosAndConsType", "item", "frequency", "percentage", "example"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "productName": {
+                        "label": "Product Name",
+                        "format": "text"
+                    },
+                    "prosAndConsType": {
+                        "label": "Type",
+                        "format": "text"
+                    },
+                    "item": {
+                        "label": "Pro/Con",
+                        "format": "text"
+                    },
+                    "frequency": {
+                        "label": "Mentioned",
+                        "format": "number"
+                    },
+                    "percentage": {
+                        "label": "% of Reviews",
+                        "format": "number"
+                    },
+                    "example": {
+                        "label": "Example Quote",
+                        "format": "text"
+                    }
+                }
+            }
+        },
+        "detailedAnalysis": {
+            "title": "Detailed Analysis",
+            "transformation": {
+                "fields": ["productName", "category", "topPro", "topCon", "qualityScore", "valueScore", "deliveryScore", "overallRecommendation"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "productName": {
+                        "label": "Product Name",
+                        "format": "text"
+                    },
+                    "category": {
+                        "label": "Category",
+                        "format": "text"
+                    },
+                    "topPro": {
+                        "label": "Top Pro",
+                        "format": "text"
+                    },
+                    "topCon": {
+                        "label": "Top Con",
+                        "format": "text"
+                    },
+                    "qualityScore": {
+                        "label": "Quality Score",
+                        "format": "number"
+                    },
+                    "valueScore": {
+                        "label": "Value Score",
+                        "format": "number"
+                    },
+                    "deliveryScore": {
+                        "label": "Delivery Score",
+                        "format": "number"
+                    },
+                    "overallRecommendation": {
+                        "label": "Recommendation",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}

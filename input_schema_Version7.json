@@ -1,0 +1,81 @@
+{
+    "title": "Input schema of the E-commerce Review Sentiment Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Start URLs",
+            "type": "array",
+            "description": "E-commerce product URLs to scrape reviews from (Amazon, eBay, etc.).",
+            "editor": "requestListSources",
+            "prefill": [
+                {
+                    "url": "https://www.amazon.com/s?k=wireless+headphones"
+                }
+            ]
+        },
+        "maxRequestsPerCrawl": {
+            "title": "Max Requests per Crawl",
+            "type": "integer",
+            "description": "Maximum number of products to analyze.",
+            "default": 50
+        },
+        "maxReviewsPerProduct": {
+            "title": "Max Reviews per Product",
+            "type": "integer",
+            "description": "Maximum number of reviews to scrape per product (1-1000+).",
+            "default": 500
+        },
+        "minReviewRating": {
+            "title": "Minimum Review Rating",
+            "type": "integer",
+            "description": "Only analyze reviews with rating at or above this value (1-5).",
+            "default": 1,
+            "enum": [1, 2, 3, 4, 5]
+        },
+        "minReviewLength": {
+            "title": "Minimum Review Length",
+            "type": "integer",
+            "description": "Only analyze reviews with at least this many characters.",
+            "default": 20
+        },
+        "reviewLanguage": {
+            "title": "Review Language",
+            "type": "string",
+            "description": "Language of reviews to analyze.",
+            "default": "en",
+            "enum": ["en", "es", "fr", "de", "it", "pt"]
+        },
+        "enableAISummarization": {
+            "title": "Enable AI Summarization",
+            "type": "boolean",
+            "description": "Use AI to extract pros and cons from reviews.",
+            "default": true
+        },
+        "sentimentAnalysisMethod": {
+            "title": "Sentiment Analysis Method",
+            "type": "string",
+            "description": "Method for analyzing sentiment (simple, advanced, ai).",
+            "default": "advanced",
+            "enum": ["simple", "advanced", "ai"]
+        },
+        "groupSimilarIssues": {
+            "title": "Group Similar Issues",
+            "type": "boolean",
+            "description": "Group similar pros/cons together.",
+            "default": true
+        },
+        "minFrequencyThreshold": {
+            "title": "Minimum Frequency Threshold",
+            "type": "integer",
+            "description": "Minimum number of times a pro/con must appear to be included.",
+            "default": 3
+        },
+        "includeExamples": {
+            "title": "Include Examples",
+            "type": "boolean",
+            "description": "Include example quotes for each pro/con.",
+            "default": true
+        }
+    }
+}

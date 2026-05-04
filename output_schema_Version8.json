@@ -1,0 +1,26 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of the E-commerce Review Sentiment Scraper",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "title": "Overview",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "sentimentSummary": {
+            "type": "string",
+            "title": "Sentiment Summary",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=sentimentSummary"
+        },
+        "prosAndCons": {
+            "type": "string",
+            "title": "Pros and Cons",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=prosAndCons"
+        },
+        "detailedAnalysis": {
+            "type": "string",
+            "title": "Detailed Analysis",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=detailedAnalysis"
+        }
+    }
+}
